@@ -1,0 +1,20 @@
+def ChkPrime(no1):
+    
+    sum = 0
+    value = 0 
+    flag = True
+    
+    for i in range(len(no1)):
+        value = int(no1[i]/2)
+        
+        for j in range(2,value+1):
+            if (no1[i]%j==0):
+                flag = False
+                break
+            else:
+                flag = True
+                
+        if flag==True:
+            sum = sum + no1[i]   
+                
+    return sum
